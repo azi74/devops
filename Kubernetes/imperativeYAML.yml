@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod                     #Type of Object
+metadata:
+  name: myapp-pod
+  labels:
+    app.kubernetes.io/name: myapp
+    type: front-end
+spec:
+  containers:
+  - name: myapp
+    image: nginx
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
+
+
+#To Run This
+# kubectl create -f [YAMLfile]

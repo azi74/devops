@@ -1,0 +1,16 @@
+kubectl config current-context              Get the current context
+kubectl config get-contexts                 List all context
+kubectl config use-context [contextName]    Set the current context
+kubectl config delete-context[contextName]  Delete a context from the config file
+
+kubectx [contextName]                       Switch context
+
+# Create a new manifests - kubectl
+kubectl create deploy mynginx --image=nginx --port=80 --replicas=3 --dry-run=client -o yaml
+
+# Namespaces
+kubectl get ns                                                      Get all namespaces
+kubectl config set-context --current --namespace=[namespaceName]    Set the current context to use a namespace
+kubectl create ns [namespaceName]                                   Create a Namespace
+kubectl delete ns [namespaceName]                                   Delete a Namespace
+kubectl get pods --all-namespaces                                   List all pods in all namespaces

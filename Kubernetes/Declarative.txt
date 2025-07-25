@@ -1,0 +1,4 @@
+kubectl run mynginx --image=nginx --port=80
+kubectl create deploy mynginx --image=nginx --port=80 --replicas=3
+kubectl create service nodeport myservice --targetPort=8080
+kubectl delete pod nginx

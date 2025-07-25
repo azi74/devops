@@ -1,0 +1,7 @@
+#Pull and run a Nginx server
+
+docker run -d -p 8080:80 --name webserver nginx
+
+#To Add a Bash Shell to the container
+
+docker container exec -it webserver bash
